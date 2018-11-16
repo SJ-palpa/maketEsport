@@ -11,22 +11,10 @@
             <!-- Links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="">....</a>
+                    <a class="nav-link" href="/administrateurSESF/listejoueur">Liste joueurs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">...</a>
-                </li>
-
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Événement
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/administrateurSESF/enregistrerAdminEvenement">enregistrer administrateur evenement</a>
-                        <a class="dropdown-item" href="">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
-                    </div>
+                    <a class="nav-link" href="/administrateurSESF/enregistrerAdminEvenement">enregistrer administrateur evenement</a>
                 </li>
             </ul>
         </nav>
@@ -104,5 +92,21 @@
                 <button class="btn btn-primary" type="submit">Valider</button>
             </form>
         </div>
+    @endif
+    @if(Request::is('administrateurSESF/listejoueur'))
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Giroud Parmentier
+                <span class="badge badge-success badge-pill"> gamer ID : active</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Guy Sartre
+                <span class="badge badge-warning badge-pill"> gamer ID : désactivé</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Patrick Rothfuss
+                <span class="badge badge-success badge-pill"> gamer ID : active</span>
+            </li>
+        </ul>
     @endif
 @endSection
